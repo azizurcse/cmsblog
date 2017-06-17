@@ -1,6 +1,12 @@
+
 @extends('layouts.admin')
 
 @section('content')
+
+    @if(\Illuminate\Support\Facades\Session::has('delete_user'))
+        <p class="big-danger">{{session('delete_user')}}</p>
+    @endif
+
     <h1>users</h1>
     <table class="table">
         <thead>
